@@ -21,7 +21,7 @@
         header("Location:index.php?include=tambah_user&notif=tambahKosong&jenis=password");
     }else {
         $sql = "insert into `admin` (`nama`, `email`, `username`, `password`, `level`) 
-        values ('$nama', '$email', '$username', MD5('$password'), '$level')";
+        values ('$nama', '$email', '$username', '$password', '$level')";
         mysqli_query($koneksi, $sql);
         header("Location:index.php?include=user&notif=tambahberhasil");
     }
